@@ -28,7 +28,7 @@ export default function drawLine(
     markerEndId = null,
     shadow = false,
     strokeOpacity = 1,
-    lineColor = 'rgb(0, 255, 0)',
+    lineColor,
   } = options as {
     color?: string;
     width?: string;

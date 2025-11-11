@@ -30,18 +30,17 @@ function drawLink(
   const boundingBoxPoints = _boundingBoxPoints(boundingBox);
   // Find the closest textBox midpoint to the annotation's anchor/start point
   const end = findClosestPoint(boundingBoxPoints, start);
-  console.log('🦊🦊🦊🦊🦊', options);
   // Finally we draw the dashed linking line
+
   const mergedOptions = Object.assign(
     {
       color: 'rgb(255, 255, 0)',
-      lineColor: 'rgb(255, 255, 0)',
       lineWidth: '1',
       lineDash: '2,3',
     },
     options
   );
-
+  console.log('🦊🦊🦊🦊🦊', mergedOptions);
   drawLine(
     svgDrawingHelper,
     annotationUID,
