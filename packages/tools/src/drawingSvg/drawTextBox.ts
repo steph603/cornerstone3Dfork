@@ -172,6 +172,7 @@ function _createTextElement(
 
   textElement.setAttribute('x', '0');
   textElement.setAttribute('y', '0');
+  textElement.setAttribute('fill', color);
   textElement.setAttribute('font-family', fontFamily);
   textElement.setAttribute('font-size', fontSize);
   textElement.setAttribute('style', combinedStyle);

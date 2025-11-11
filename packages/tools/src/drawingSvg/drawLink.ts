@@ -40,7 +40,7 @@ function drawLink(
     },
     options
   );
-  console.log('🦊🦊🦊🦊🦊', mergedOptions);
+
   drawLine(
     svgDrawingHelper,
     annotationUID,
