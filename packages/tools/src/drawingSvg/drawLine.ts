@@ -28,6 +28,7 @@ export default function drawLine(
     markerEndId = null,
     shadow = false,
     strokeOpacity = 1,
+    lineColor = 'rgb(0, 255, 0)',
   } = options as {
     color?: string;
     width?: string;
@@ -37,6 +38,7 @@ export default function drawLine(
     markerEndId?: string;
     shadow?: boolean;
     strokeOpacity?: number;
+    lineColor?: string;
   };
 
   // for supporting both lineWidth and width options
@@ -53,7 +55,7 @@ export default function drawLine(
     y1: `${start[1]}`,
     x2: `${end[0]}`,
     y2: `${end[1]}`,
-    stroke: color,
+    stroke: lineColor || color,
     style: dropShadowStyle,
     'stroke-width': strokeWidth,
     'stroke-dasharray': lineDash,

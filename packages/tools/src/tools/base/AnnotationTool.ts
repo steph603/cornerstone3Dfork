@@ -327,7 +327,6 @@ abstract class AnnotationTool extends AnnotationDisplayTool {
   ): Record<string, unknown> {
     // Todo: this function can be used to set different styles for different toolMode
     // for the textBox.
-
     return {
       visibility: this.getStyle(
         'textBoxVisibility',
@@ -354,6 +353,17 @@ abstract class AnnotationTool extends AnnotationDisplayTool {
       ),
       lineDash: this.getStyle(
         'textBoxLinkLineDash',
+        specifications,
+        annotation
+      ),
+      borderRadius: this.getStyle(
+        'textBoxBorderRadius',
+        specifications,
+        annotation
+      ),
+      margin: this.getStyle('textBoxMargin', specifications, annotation),
+      lineColor: this.getStyle(
+        'textBoxLinkLineColor',
         specifications,
         annotation
       ),
@@ -406,7 +416,6 @@ abstract class AnnotationTool extends AnnotationDisplayTool {
     const markerSize = getStyle('markerSize') as string;
     const shadow = getStyle('shadow') as boolean;
     const textboxStyle = this.getLinkedTextBoxStyle(styleSpecifier, annotation);
-
     return {
       visibility,
       locked,
